@@ -1,7 +1,10 @@
 <template>
   <h1>Welcome to the blog!</h1>
   <pre></pre>
-  <BlogPost v-for="blogPost in blogPosts" :blogPost="blogPost" />
+  <BlogPost 
+    v-for="blogPost in blogPosts" 
+    :blogPost="blogPost" 
+  />
 </template>
 
 <script>

@@ -7,6 +7,10 @@ The order in which I'll build test projects are:
 - Vue 3 - Composition API
 - Nuxt 3, etc
 
+The ultimate goal of going through this learning is to implement the following for EightValues.com
+- Tests
+- CICD Pipeline
+
 ## Objectives
 
 The goal of this project is to learn the building blocks of Vue 3, in particular the Options API.
@@ -18,6 +22,7 @@ List of features used:
 - $emit, and event listeners
 - $refs
 
+The ultimate
 
 ## Project setup
 
