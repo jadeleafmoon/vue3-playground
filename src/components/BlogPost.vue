@@ -26,5 +26,6 @@ export default {
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
+  max-width: 60%;
 }
 </style>

@@ -20,7 +20,7 @@
 
   <div class="experiment">
     <h2>Counter + $emit</h2>
-    <p>Number of times blog posts were read: {{ blogsRead }}</p>
+    <p>Number of times blog posts were read: <strong>{{ blogsRead }}</strong></p>
   </div>
 
   <div>
@@ -95,6 +95,7 @@ button:hover {
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
+  max-width: 60%;
 }
 
 
