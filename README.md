@@ -41,3 +41,5 @@ npm run serve
 ### Style Guide
 Though my preference is to use semicolons `;` when coding in JavaScript, I followed the Vue way of doing things and did not use them for this project.
 
+For the time being, I also did not use a formatter, such as the equivalent of Prettier for React.
+

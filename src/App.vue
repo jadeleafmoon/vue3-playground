@@ -1,25 +1,37 @@
 <template>
   <h1>Welcome to the blog!</h1>
 
-  <h2>Counter + $emit</h2>
-  <p>Number of times blog posts were read: {{ blogsRead }}</p>
+  <div class="experiment">
+    <h2>Computed Properties</h2>
+    <p>Enter a number in each field.</p>
+    <input v-model="num1" type="number"/>
+    <br>
+    <input v-model="num2" type="number"/>
+    <p>Sum: {{ sum }}</p>
+    <p>Product: {{ product }}</p>
+  </div>
 
-  <h2>$refs</h2>
-  <p ref="myRef">Change this text with $refs</p>
+  <div class="experiment">
+    <h2>$refs</h2>
+    <p ref="myRef">Old text.</p>
+    <p>Click the following to change the text using $refs:</p>
+    <button @click="toggleText">Toggle the Text</button>
+  </div>
 
-  <h2>Computed Properties</h2>
-  <p>Enter a number in each field.</p>
-  <input v-model="num1" type="number"/>
-  <input v-model="num2" type="number"/>
-  <p>Sum: {{ sum }}</p>
-  <p>Product: {{ product }}</p>
+  <div class="experiment">
+    <h2>Counter + $emit</h2>
+    <p>Number of times blog posts were read: {{ blogsRead }}</p>
+  </div>
 
-  <h2>Blog Posts</h2>
-  <BlogPost 
-    v-for="blogPost in blogPosts" 
-    :blogPost="blogPost" 
-    @handle-mark-as-read="addOne"
-  />
+  <div>
+    <h2>Blog Posts</h2>
+    <BlogPost 
+      v-for="blogPost in blogPosts" 
+      :blogPost="blogPost" 
+      @handle-mark-as-read="addOne"
+    />
+  </div>
+
 </template>
 
 <script>
@@ -51,15 +63,39 @@ export default {
   methods: {
     addOne() {
       this.blogsRead += 1
+    },
+    toggleText() {
+      const currentText = this.$refs.myRef.textContent;
+      if (currentText === "Old text.") {
+        this.$refs.myRef.textContent = "New text!"
+      } else if (currentText === "New text!") {
+        this.$refs.myRef.textContent = "Old text."
+      }
     }
   },
-  mounted() {
-    this.$refs.myRef.textContent = "New text!"
-  }
 
 }
 </script>
 
 <style>
+
+button {
+  border-radius: 5px;
+  padding: 10px 10px;
+  border: 1px solid white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: lightcyan;
+}
+
+.experiment {
+  background-color: lightgray;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 
 </style>
