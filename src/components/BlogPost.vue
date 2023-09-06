@@ -1,11 +1,16 @@
 <template>
   <div class="post">
-    <h1>Blog Post 1</h1>
-    <p>Some text 1 ...</p>
+    <h1> {{ blogPost.title }} </h1>
+    <p> {{ blogPost.text }} </p>
   </div>
 </template>
 
 <script>
+
+export default {
+  props: ['blogPost'],
+}
+
 </script>
 
 <style scoped>

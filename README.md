@@ -14,6 +14,7 @@ The goal of this project is to learn the building blocks of Vue 3, in particular
 List of features used:
 - Components
 - Props
+- Computed properties
 - $emit, and event listeners
 - $refs
 
