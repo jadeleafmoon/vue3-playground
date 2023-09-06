@@ -1,6 +1,6 @@
 # Welcome!
 
-This project is a play to test and build features using Vue 3 - Options API.
+This project is a playground to test and build features using Vue 3 - Options API.
 
 The order in which I'll build test projects are:
 - Vue 3 - Options API
@@ -38,4 +38,6 @@ Run the project locally using:
 npm run serve
 ```
 
+### Style Guide
+Though my preference is to use semicolons `;` when coding in JavaScript, I followed the Vue way of doing things and did not use them for this project.
 
