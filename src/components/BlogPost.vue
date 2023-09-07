@@ -25,7 +25,5 @@ export default {
   background-color: lightcoral;
 }
 
-.blog-title-input {
-  width: 70%;
-}
+
 </style>

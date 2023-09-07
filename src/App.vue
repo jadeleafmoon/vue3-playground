@@ -2,20 +2,23 @@
   <h1>Welcome to the blog!</h1>
 
   <div class="experiment card">
-    <h2>Computed Properties</h2>
+    <h2>Sum and Product</h2>
     <p>Enter a number in each field.</p>
     <input v-model="num1" type="number"/>
     <br>
     <input v-model="num2" type="number"/>
     <p>Sum: {{ sum }}</p>
     <p>Product: {{ product }}</p>
+    <p>📖 Learned: computed properties</p>
   </div>
 
   <div class="experiment card">
-    <h2>$refs</h2>
+    <h2>Change text with refs</h2>
     <p ref="myRef">Old text.</p>
-    <p>Click the following to change the text using $refs:</p>
     <button @click="toggleText">Toggle the Text</button>
+    <p>📖 Learned: The use of $refs. In this case, the text is changed. </p>
+    <p>Careful: refs are used only in special cases.</p>
+    <p>Refs are available only after a component is mounted.</p>
   </div>
 
   <div>
@@ -25,7 +28,7 @@
     <div class="experiment card">
       <h2>Number of times blogs were read:</h2>
       <h3>{{ blogsRead }}</h3>
-      <p>Uses a counter button with $emit.</p>
+      <p>📖 Learned: creating a counter button with $emit.</p>
     </div>
 
     
@@ -150,6 +153,10 @@ textarea {
 
 input {
   padding: 10px;
+}
+
+.blog-title-input {
+  width: 70%;
 }
 
 .experiment {
