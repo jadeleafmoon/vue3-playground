@@ -10,6 +10,7 @@
 
 export default {
   props: ['blogPost'],
+  emits: ['handleMarkAsRead'],
   methods: {
     handleMarkAsRead() {
       this.$emit('handleMarkAsRead');
