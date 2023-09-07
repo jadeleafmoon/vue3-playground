@@ -50,6 +50,7 @@
 
     <BlogPost 
       v-for="blogPost in blogPosts" 
+      :key="blogPost.id"
       :blogPost="blogPost" 
       @handle-mark-as-read="addOne"
     />
@@ -71,9 +72,9 @@ export default {
       newBlogText: "",
       blogsRead: 0,
       blogPosts: [
-        { title: "Blog Post 1", text: "Some text 1 ..." },
-        { title: "Blog Post 2", text: "Some text 2 ..." },
-        { title: "Blog Post 3", text: "Some text 3 ..." },
+        { title: "Blog Post 1", text: "Some text 1 ...", id: 1 },
+        { title: "Blog Post 2", text: "Some text 2 ...", id: 2 },
+        { title: "Blog Post 3", text: "Some text 3 ...", id: 3 },
       ]
     }
   },
@@ -98,10 +99,13 @@ export default {
       }
     },
     submitBlogPost() {
+      const newId = this.blogPosts[this.blogPosts.length - 1].id + 1;
       const newBlogPost = { 
         title: this.newBlogTitle, 
-        text: this.newBlogText
+        text: this.newBlogText,
+        id: newId,
       }
+      console.log(newBlogPost)
       this.blogPosts.push(newBlogPost)
       this.newBlogTitle = ""
       this.newBlogText = ""
