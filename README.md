@@ -22,7 +22,8 @@ List of features used:
 - $emit, and event listeners
 - $refs
 
-The ultimate
+Non-goals:
+- CSS, making the site look attractive. It's just about functionality for now.
 
 ## Project setup
 
